@@ -17,7 +17,7 @@ import {commands} from "./commands";
 	const paperKey: string = fileData.toString("utf8");
 
 	const bot: KBBot = await KBBot.init("covid19_stats", paperKey, {
-		debugging: true,
+		debugging: false,
 		logging: true
 	});
 
