@@ -1,6 +1,8 @@
 # covid19-bot
 A keybase bot that provides information on the covid19 virus.
 
+Chat with on keybase as username: [covid19_stats](https://keybase.io/covid19_stats).
+
 ## Commands
 ```
 !cases
