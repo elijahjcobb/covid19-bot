@@ -10,13 +10,13 @@ import {Covid19, Country, Global, Report} from "@elijahjcobb/covid19";
 
 function getMessageForCountry(country: Country): string {
 
-	return `${country.country} has *${country.cases} total cases*. There were ${country.todayCases} new cases today and sadly ${country.todayDeaths} people lost their lives today. ${country.critical} people are in critical condition right now. There are *${country.active} active cases*, *${country.deaths} deaths*, and thankfully *${country.recovered} recoveries*. Out of one million people ${country.casesPerOneMillion} have the virus (~${((country.casesPerOneMillion / 1_000_000) * 100).toFixed(2)}%).`;
+	return `${country.country} has *${country.cases.toLocaleString()} total cases*. There were ${country.todayCases.toLocaleString()} new cases today and sadly ${country.todayDeaths.toLocaleString()} people lost their lives today. ${country.critical.toLocaleString()} people are in critical condition right now. There are *${country.active.toLocaleString()} active cases*, *${country.deaths.toLocaleString()} deaths*, and thankfully *${country.recovered.toLocaleString()} recoveries*. Out of one million people ${country.casesPerOneMillion.toLocaleString()} have the virus (~${((country.casesPerOneMillion / 1_000_000) * 100).toFixed(2)}%).`;
 
 }
 
 function getMessageForGlobal(global: Global): string {
 
-	return `Throughout the world, the *total number of cases is ${global.cases}*. Sadly ${global.deaths} people have lost their life but thankfully ${global.recovered} have recovered.`;
+	return `Throughout the world, the *total number of cases is ${global.cases.toLocaleString()}*. Sadly ${global.deaths.toLocaleString()} people have lost their life but thankfully ${global.recovered.toLocaleString()} have recovered.`;
 
 }
 
