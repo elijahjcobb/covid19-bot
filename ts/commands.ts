@@ -10,7 +10,7 @@ import {Covid19, Country, Global, Report} from "@elijahjcobb/covid19";
 
 function getMessageForCountry(country: Country): string {
 
-	return `${country.country} has *${country.cases.toLocaleString()} total cases*. There were ${country.todayCases.toLocaleString()} new cases today and sadly ${country.todayDeaths.toLocaleString()} people lost their lives today. ${country.critical.toLocaleString()} people are in critical condition right now. There are *${country.active.toLocaleString()} active cases*, *${country.deaths.toLocaleString()} deaths*, and thankfully *${country.recovered.toLocaleString()} recoveries*. Out of one million people ${country.casesPerOneMillion.toLocaleString()} have the virus (\~${((country.casesPerOneMillion / 1_000_000) * 100).toFixed(2)}%) and ${country.deathsPerOneMillion.toLocaleString()} have died (\~${((country.deathsPerOneMillion / 1_000_000) * 100).toFixed(2)}%).`;
+	return `${country.country} has *${country.cases.toLocaleString()} total cases*. There were ${country.todayCases.toLocaleString()} new cases today and sadly ${country.todayDeaths.toLocaleString()} people lost their lives today. ${country.critical.toLocaleString()} people are in critical condition right now. There are *${country.active.toLocaleString()} active cases*, *${country.deaths.toLocaleString()} deaths*, and thankfully *${country.recovered.toLocaleString()} recoveries*. Out of one million people ${country.casesPerOneMillion.toLocaleString()} have the virus (\~${((country.casesPerOneMillion / 1_000_000) * 100).toFixed(2)}%) and ${country.deathsPerOneMillion.toLocaleString()} and (\~${((country.deathsPerOneMillion / country.casesPerOneMillion) * 100).toFixed(2)}%) of cases have died.`;
 
 }
 
