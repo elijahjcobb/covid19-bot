@@ -18,7 +18,8 @@ import {commands} from "./commands";
 
 	const bot: KBBot = await KBBot.init("covid19_stats", paperKey, {
 		debugging: false,
-		logging: true
+		logging: true,
+		checkAllMessages: false
 	});
 
 	for (const command of commands) bot.command(command);
