@@ -87,6 +87,20 @@ export const commands: KBCommand[] = [
 		}
 	},
 	{
+		name: "top",
+		description: "The country that has the highest number of cases.",
+		handler: async (msg: KBMessage, res: KBResponse): Promise<void> => {
+
+			const countries: Country[] = await Covid19.getAllCountries();
+			countries.sort((a: Country, b: Country): number => { return b.cases - a.cases; });
+			const country: Country | undefined = countries[0];
+			if (country === undefined) return await res.send("Whoops! There is an API error. Try again later.");
+
+			await res.send(getMessageForCountry(country));
+
+		}
+	},
+	{
 		name: "rank",
 		description: "The ranking of countries and cases. Provide a number to limit result count.",
 		usage: "!rank 10",
