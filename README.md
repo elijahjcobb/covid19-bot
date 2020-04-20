@@ -13,6 +13,7 @@ Chat with on keybase as username: [covid19_stats](https://keybase.io/covid19_sta
 !rank 10
 !recovered
 !deaths
+!top
 ```
 
 ## Examples
@@ -31,5 +32,5 @@ You can view the
 [source code](https://github.com/elijahjcobb/***/tree/master/ts) of the project on GitHub.
 
 ## Bugs
-If you find any bugs please [create an issue on GitHub](https://github.com/elijahjcobb/covid19-bot/issues) or if you are old
-fashioned email me at [elijah@elijahcobb.com](mailto:elijah@elijahcobb.com).
+If you find any bugs please [create an issue on GitHub](https://github.com/elijahjcobb/covid19-bot/issues) or if you are
+old-fashioned email me at [elijah@elijahcobb.com](mailto:elijah@elijahcobb.com).
