@@ -93,7 +93,10 @@ export const commands: KBCommand[] = [
 
 			const countries: Country[] = await Covid19.getAllCountries();
 			countries.sort((a: Country, b: Country): number => { return b.cases - a.cases; });
-			const country: Country | undefined = countries[0];
+
+			// using index 1 because index 0 will always be the 'world' entry the api provides
+			const country: Country | undefined = countries[1];
+
 			if (country === undefined) return await res.send("Whoops! There is an API error. Try again later.");
 
 			await res.send(getMessageForCountry(country));
@@ -121,6 +124,9 @@ export const commands: KBCommand[] = [
 			let i: number = 1;
 
 			for (const country of countries) {
+
+				// The api being used now returns "world" info in this endpoint.
+				if (country.country === "World") continue;
 
 				message += `*${i}*. ${country.country} _(${country.cases})_\n`;
 				i++;
