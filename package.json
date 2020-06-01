@@ -1,5 +1,5 @@
 {
-	"name": "@elijahjcobb/***",
+	"name": "@elijahjcobb/covid19-bot",
 	"version": "0.1.0",
 	"description": "",
 	"keywords": [],
@@ -31,8 +31,8 @@
 	},
 	"homepage": "https://github.com/elijahjcobb/***#readme",
 	"dependencies": {
-		"@elijahjcobb/covid19": "latest",
-		"@elijahjcobb/keybase-bot-builder": "latest"
+		"@elijahjcobb/covid19": "2.0.0",
+		"@elijahjcobb/keybase-bot-builder": "1.1.11"
 	},
 	"devDependencies": {
 		"@types/node": "latest",
